@@ -5,6 +5,7 @@ import { buildSchema } from "type-graphql";
 import hotelsResolver from "./hotelsResolver";
 import { graphqlHTTP } from "koa-graphql";
 import "./createConnection";
+import * as cors from "@koa/cors";
 
 async function main(){
 const app = new koa();
@@ -13,7 +14,8 @@ const apolloserver = new ApolloServer({schema:resolvers});
 const router = new Router();
 router.all("/graphql",graphqlHTTP({schema:resolvers}));
 apolloserver.applyMiddleware({app});
-app.use(router.routes());
+app.use(cors());
+app.use(router.routes()).use(router.allowedMethods());
 app.listen(process.env.PORT || 3020 , ()=>console.log("graphql is running"))
 }
 

@@ -10,7 +10,7 @@
     "KoaDbSql": "ts-node-dev --respawn KoaDbSql.ts",
     "KoaTypeOrm": "ts-node-dev --respawn KoaTypeOrm.ts",
     "KoaGraphQL": "ts-node-dev --respawn KoaGraphQL.ts",
-    "start" : "ts-node-dev --respawn SimpleNode.ts"
+    "start" : "ts-node-dev --respawn KoaGraphQL.ts"
   },
   "author": "",
   "license": "ISC",
