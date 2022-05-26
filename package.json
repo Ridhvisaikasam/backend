@@ -6,6 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "SimpleNode" : "ts-node-dev --respawn SimpleNode.ts",
+    "SimpleKoa": "ts-node-dev --respawn SimpleKoa.ts",
+    "KoaDbSql": "ts-node-dev --respawn KoaDbSql.ts",
+    "KoaTypeOrm": "ts-node-dev --respawn KoaTypeOrm.ts",
+    "KoaGraphQL": "ts-node-dev --respawn KoaGraphQL.ts",
     "start" : "ts-node-dev --respawn SimpleNode.ts"
   },
   "author": "",
