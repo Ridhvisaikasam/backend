@@ -10,7 +10,9 @@ import * as cors from "@koa/cors";
 async function main(){
 const app = new koa();
 const resolvers = await buildSchema({resolvers:[hotelsResolver]});
-const apolloserver = new ApolloServer({schema:resolvers});
+const apolloserver = new ApolloServer({schema:resolvers,
+    playground: true,
+    introspection: true,});
 const router = new Router();
 router.all("/graphql",graphqlHTTP({schema:resolvers}));
 apolloserver.applyMiddleware({app});
